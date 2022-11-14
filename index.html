@@ -4,7 +4,162 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Mini Cooper</title>
   </head>
-  <body></body>
+  <style>
+    h1 {
+      text-align: center;
+      font-size: 40px;
+      font-family: Georgia, "Times New Roman", Times, serif;
+      margin: 20px 0 20px 0 auto;
+      font-weight: normal;
+    }
+    h2 {
+      text-align: center;
+      font-size: 25px;
+      font-family: Georgia, "Times New Roman", Times, serif;
+      margin: 0 auto;
+      font-weight: normal;
+    }
+    p {
+      text-align: left;
+      font-size: 18px;
+      line-height: 1.5;
+      font-family: Georgia, "Times New Roman", Times, serif;
+      padding: 0 250px;
+      font-weight: lighter;
+    }
+    a {
+      color: #1a2bc4e3;
+    }
+    img {
+      display: block;
+      margin: 0 auto;
+      padding: 200px auto;
+      width: 400px;
+      border-radius: 20%;
+      transition: all 1s ease-in-out;
+      border: 1px solid #885df1;
+    }
+    button {
+      font-family: Georgia, "Times New Roman", Times, serif;
+      font-size: medium;
+      display: block;
+      margin: 20px auto;
+      padding: 20px 30px;
+      color: #1a2bc4e3;
+      opacity: 1;
+      border: 1px solid #885df1;
+      border-radius: 30px;
+      box-shadow: 5px 5px 5px rgb(0 0 0 / 30%);
+      transition: all 200ms ease-in-out;
+      background: #ebc6ff;
+    }
+    img:hover {
+      cursor: pointer;
+      transform: scale(1.5);
+      cursor: zoom-in;
+    }
+    a:hover {
+      text-decoration: none;
+      color: #001a49e5;
+      transition: all 200ms ease-in-out;
+    }
+
+    button:hover {
+      cursor: pointer;
+      transition: all 200ms ease-in-out;
+      background: #ffe9e3;
+    }
+
+    .more-info {
+      text-align: center;
+      text-decoration: none;
+      font-size: medium;
+      color: blue;
+      font-family: Georgia, "Times New Roman", Times, serif;
+    }
+    .creator {
+      text-align: center;
+      font-size: 16px;
+      font-family: Georgia, "Times New Roman", Times, serif;
+      color: #1a2bc4e3;
+      padding: 0px 150px 0px 150px;
+      font-weight: lighter;
+    }
+    .document {
+      background: linear-gradient(45deg, #889cca 0%, #e4efe9 100%);
+      border: 8px #38598b solid;
+      border-radius: 4px;
+      margin: 50px 100px 50px 150px;
+    }
+    .box {
+      border: 1px solid rgb(19, 113, 236);
+      margin: 20px auto;
+      border-radius: 4px;
+      margin: 0px;
+      text-align: center;
+      color: #9e2915e3;
+      font-size: larger;
+    }
+    body {
+      background: rgba(166, 167, 233, 0.76);
+    }
+  </style>
+  <body>
+    <div class="document">
+      <h1>The History of Mini Coopers</h1>
+      <img
+        src="
+    https://s3.amazonaws.com/shecodesio-production/uploads/files/000/049/483/original/mini_cooper.jpg?1666295626"
+        alt="Blue Mini Cooper"
+      />
+      <br />
+
+      <h2>🚙 The Inspiration Behind<em> The Little Car </em>🚙</h2>
+      <p>
+        The year was 1957, and in post-World War II England the Suez Crisis had
+        sent fuel prices soaring, leading many to start wondering if the large,
+        gas-guzzling vehicles of the day made much sense.So Sir Leonard Lord of
+        the Morris Company issued his top engineer, Alec Issigonis, a challenge:
+        design and build a small, fuel-efficient car capable of carrying four
+        adults, within economic reach of just about everyone. As fate would have
+        it, the challenge of fitting so much function into such a small package
+        inspired a couple of historic innovations.Soon enough, people began to
+        recognize that the Mini was not merely a car.
+      </p>
+      <hr />
+      <div class="more-info">
+        <a
+          href="https://www.miniusa.com/why-mini/why-mini/over-60-years-of-motoring.html"
+          target="_blank"
+          >Learn more about Mini Coopers</a
+        >
+      </div>
+
+      <p>
+        <span class="creator"
+          ><strong>This page was built by Irena Naneva</strong></span
+        >
+      </p>
+      <button type="button">Mini Button 🚙</button>
+      <div class="box">Let's go motor!</div>
+    </div>
+  </body>
+  <script>
+    function miniCooper() {
+      let age = prompt("what is your age?");
+      let name = prompt("What is your name?");
+      let email = prompt("What is your email?");
+      let heading = document.querySelector(".box");
+      if (age >= 18) {
+        heading.innerHTML =
+          name + "!" + " You have been added to our newsletter. Let's motor!🚙";
+      } else {
+        alert("Sorry, " + name + "!" + " You are too young of a fan! 🚙");
+      }
+    }
+    let miniButton = document.querySelector("button");
+    miniButton.addEventListener("click", miniCooper);
+  </script>
 </html>
